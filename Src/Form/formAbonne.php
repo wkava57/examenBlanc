@@ -17,41 +17,41 @@ class FormAbonne
             ->ajoutInput('number', 'id', ['id' => 'abonne', 'class' => 'form-control'])
             ->ajoutLabelFor('text', 'prenom')
             ->ajoutInput('text', 'prenom', ['prenom' => 'abonne', 'class' => 'form-control'])
-            ->ajoutLabelFor('text', 'journaliste')
-            ->ajoutInput('text', 'journaliste', ['journaliste' => 'article', 'class' => 'form-control'])
-            ->ajoutBouton('Ajouter un article', ['class' => 'btn btn-primary'])
+            ->ajoutLabelFor('text', 'nom')
+            ->ajoutInput('text', 'nom', ['nom' => 'abonne', 'class' => 'form-control'])
+            ->ajoutBouton('Ajouter un abonné', ['class' => 'btn btn-primary'])
             ->finForm();
         return $form;
     }
 
-    public static function buildUpdateArticle(Article $article)
+    public static function buildUpdateAbonne(Abonne $abonne)
     {
         $form = new Form();
 
-        $form->debutForm('post', URL_ROOT . 'update/' . $article->getIdArticle())
-            ->ajoutLabelFor('text', 'Titre :')
-            ->ajoutInput('text', 'titre', ['titre' => 'article', 'class' => 'form-control'])
-            ->ajoutLabelFor('text', 'infoSport')
-            ->ajoutInput('text', 'infoSport', ['infoSport' => 'article', 'class' => 'form-control'])
-            ->ajoutLabelFor('text', 'journaliste')
-            ->ajoutInput('text', 'journaliste', ['journaliste' => 'article', 'class' => 'form-control'])
-            ->ajoutBouton('Mettre a jour un article', ['class' => 'btn btn-primary'])
+        $form->debutForm('post', URL_ROOT . 'update/' . $abonne->getIdAbonne())
+            ->ajoutLabelFor('number', 'id :')
+            ->ajoutInput('number', 'id', ['id' => 'abonne', 'class' => 'form-control'])
+            ->ajoutLabelFor('text', 'prenom :')
+            ->ajoutInput('text', 'prenom', ['prenom' => 'abonne', 'class' => 'form-control'])
+            ->ajoutLabelFor('text', 'nom :')
+            ->ajoutInput('text', 'nom', ['nom' => 'abonne', 'class' => 'form-control'])
+            ->ajoutBouton('Mettre à jour un abonné', ['class' => 'btn btn-primary'])
             ->finForm();
         return $form;
     }
 
-    public static function buildDeleteArticle($article)
+    public static function buildDeleteAbonne($abonne)
     {
         $form = new Form();
 
-        $form->debutForm('post', URL_ROOT . 'Delete/' . $article->getIdArticle())
-            ->ajoutLabelFor('text', 'Titre :')
-            ->ajoutInput('text', 'titre', ['titre' => 'article', 'class' => 'form-control'])
-            ->ajoutLabelFor('text', 'infoSport')
-            ->ajoutInput('text', 'infoSport', ['infoSport' => 'article', 'class' => 'form-control'])
-            ->ajoutLabelFor('text', 'journaliste')
-            ->ajoutInput('text', 'journaliste', ['journaliste' => 'article', 'class' => 'form-control'])
-            ->ajoutBouton('Supprimer un article', ['class' => 'btn btn-primary'])
+        $form->debutForm('post', URL_ROOT . 'Delete/' . $abonne->getIdAbonne())
+            ->ajoutLabelFor('number', 'id :')
+            ->ajoutInput('number', 'id', ['id' => 'abonne', 'class' => 'form-control'])
+            ->ajoutLabelFor('text', 'prenom')
+            ->ajoutInput('text', 'prenom', ['prenom' => 'abonne', 'class' => 'form-control'])
+            ->ajoutLabelFor('text', 'nom')
+            ->ajoutInput('text', 'nom', ['nom' => 'abonne', 'class' => 'form-control'])
+            ->ajoutBouton('Supprimer un abonné', ['class' => 'btn btn-primary'])
             ->finForm();
         return $form;
     }
