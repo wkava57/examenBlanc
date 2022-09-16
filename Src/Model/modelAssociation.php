@@ -4,33 +4,41 @@ namespace Src\Model;
 
 class Association
 {
+    private int $idAssociation;
     private int $idAbonne;
-    private string $prenom;
-    private string $nom;
+    private int $idOuvrage;
+    
     
 
-    public function __construct($idAbonne, $prenom, $nom)
+    public function __construct($idAssociation, $idAbonne, $idOuvrage)
     {
+        $this->id = $idAssociation;
         $this->abonne = $idAbonne;
-        $this->prenom = $prenom;
-        $this->nom = $nom;
+        $this->ouvrage = $idOuvrage;
     }
 
-    public function getAbonne(): int
+    public function getIdAssociation(): int
+    {
+        return $this->idAssociation;
+    }
+    public function setIdAssociation($idAssociation): void{
+        $this->id = $idAssociation;
+    }
+
+    public function getIdAbonne(): int
     {
         return $this->idAbonne;
     }
-    public function getPrenom(): string
-    {
-        return $this->prenom;
-    }
-    public function getNom(): string
-    {
-        return $this->nom;
-    }
-    
-    public function setAbonne($idAbonne)
-    {
+    public function setIdAonne($idAbonne): void{
         $this->idAbonne = $idAbonne;
     }
+
+    public function getIdOuvrage(): int
+    {
+        return $this->idOuvrage;
+    }
+    public function setIdOuvrage($idOuvrage): void{
+        $this->idOuvrage = $idOuvrage;
+    }
+   
 }

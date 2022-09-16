@@ -29,7 +29,7 @@ class Ouvrage
         return $this->auteur;
     }
     
-    public function setIdOuvrage($idOuvrage)
+    public function setIdOuvrage($idOuvrage): void
     {
         $this->idOuvrage = $idOuvrage;
     }

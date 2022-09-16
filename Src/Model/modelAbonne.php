@@ -29,7 +29,7 @@ class Abonne
         return $this->nom;
     }
     
-    public function setIdAbonne($idAbonne)
+    public function setIdAbonne($idAbonne): void
     {
         $this->idAbonne = $idAbonne;
     }
