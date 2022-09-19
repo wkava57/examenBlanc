@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repository;
+namespace Src\Repository;
 
-use App\Model\Association;
-use App\Service\Database;
+use Src\Model\Association;
+use Src\Service\Database;
 use PDO;
 
 class AssociationRepository extends Database implements IAssociationRepository
@@ -30,7 +30,7 @@ class AssociationRepository extends Database implements IAssociationRepository
         $arr = $stmt->fetchAll();
 
         $stmt = null;
-        $articles = [];
+        $abonne = [];
         foreach ($arr as $abonne) {
             $p = new Abonne($abonne['idAbonne'], $abonne['prenom'], $abonne['nom']);
             $p->setIdAbonne($abonne['idAbonne']);

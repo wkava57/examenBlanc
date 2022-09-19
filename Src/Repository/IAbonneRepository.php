@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace Src\Repository;
 
-use App\Model\Abonne;
+use Src\Model\Abonne;
 
 interface IAbonneRepository
 {

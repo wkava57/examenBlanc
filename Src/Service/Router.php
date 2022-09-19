@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Service;
+namespace Src\Service;
 
-//use App\Exception\RouterException;
+//use Src\Exception\RouterException;
 
 class Router
 {

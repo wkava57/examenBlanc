@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace Src\Repository;
 
-use App\Model\Ouvrage;
+use Src\Model\Ouvrage;
 
 interface IOuvrageRepository
 {

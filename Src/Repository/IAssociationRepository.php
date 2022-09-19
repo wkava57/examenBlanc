@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repository;
+namespace Src\Repository;
 
-use App\Model\Association;
+use Src\Model\modelAssociation;
 
 interface IAssociationRepository
 {

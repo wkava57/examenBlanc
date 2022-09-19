@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repository;
+namespace Src\Repository;
 
-use App\Model\modelOuvrage;
-use App\Model\Ouvrage;
-use App\Service\Database;
+use Src\Model\modelOuvrage;
+use Src\Model\Ouvrage;
+use Src\Service\Database;
 use PDO;
 
 class OuvrageRepository extends Database implements IOuvrageRepository

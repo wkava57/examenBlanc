@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repository;
+namespace Src\Repository;
 
-use App\Model\Abonne;
-use App\Service\Database;
+use Src\Model\Abonne;
+use Src\Service\Database;
 use PDO;
 
 class AbonneRepository extends Database implements IAbonneRepository
